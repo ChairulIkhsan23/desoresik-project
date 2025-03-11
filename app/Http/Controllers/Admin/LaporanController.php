@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Petugas;
 use Illuminate\Http\Request;
 
-class PetugasController extends Controller
+class LaporanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('petugas.dashboard');
+        //
     }
 
     /**
@@ -34,7 +33,7 @@ class PetugasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Petugas $petugas)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +41,7 @@ class PetugasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Petugas $petugas)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +49,7 @@ class PetugasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Petugas $petugas)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +57,7 @@ class PetugasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Petugas $petugas)
+    public function destroy(string $id)
     {
         //
     }

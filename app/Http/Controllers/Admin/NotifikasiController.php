@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TPS;
 use Illuminate\Http\Request;
 
-class TPSController extends Controller
+class NotifikasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +33,7 @@ class TPSController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(TPS $tPS)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +41,7 @@ class TPSController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(TPS $tPS)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +49,7 @@ class TPSController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, TPS $tPS)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +57,7 @@ class TPSController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(TPS $tPS)
+    public function destroy(string $id)
     {
         //
     }
