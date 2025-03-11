@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }).addTo(map);
 
     var locations = [
-        { name: "TPS 1", lat: -6.929543, lng: 107.634506 },
-        { name: "TPS 2", lat: -6.945024, lng: 107.605659 },
-        { name: "TPS 3", lat: -6.960372, lng: 107.590485 },
+        { lat: -6.43022, lng: 108.30191, name: "TPA PECUK INDRAMAYU" },
+        { lat: -6.35739, lng: 108.33284, name: "TPA PAPAN SEJAHTERA" },
+        { lat: -6.32531, lng: 108.32153, name: "DINAS LH" }
     ];
 
     locations.forEach(function(loc) {

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('title', 'Admin Dashboard')
 
@@ -7,7 +7,7 @@
     <!-- Header Dashboard -->
     <h2 class="text-3xl font-bold text-gray-800">Dashboard Admin</h2>
     <p class="mt-1 text-gray-600">Selamat datang, <span class="font-semibold text-emerald-700">{{ auth()->user()->name }}</span>!</p>
-
+    
     <!-- Statistik -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         <!-- Card Jumlah Pengguna -->
@@ -55,36 +55,7 @@
     <h3 class="text-xl font-semibold text-gray-800">Lokasi TPS</h3>
     <div id="map" class="w-full h-96 mt-4 rounded-lg shadow-md"></div>
 </div>
-
-@push('scripts')
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var map = L.map('map').setView([-6.32531, 108.32153], 12);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-        // Array titik lokasi TPS (latitude, longitude, dan nama)
-        var tpsLocations = [
-            { lat: -6.43022, lng: 108.30191, name: "TPA PECUK INDRAMAYU" },
-            { lat: -6.35739, lng: 108.33284, name: "TPA PAPAN SEJAHTERA" },
-            { lat: -6.32531, lng: 108.32153, name: "DINAS LH" }
-        ];
-
-        // Loop untuk menambahkan marker ke peta
-        tpsLocations.forEach(function(tps) {
-            L.marker([tps.lat, tps.lng])
-                .addTo(map)
-                .bindPopup(`<b>${tps.name}</b>`);
-        });
-
-        console.log("Leaflet Map with TPS Markers Loaded!");
-    });
-</script>
-@endpush
-
-    
+<script src="{{ asset('Js/map.js') }}"></script>    
 
     <!-- Tabel Data -->
     <div class="mt-8">
